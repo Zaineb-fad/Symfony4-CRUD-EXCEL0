@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  <title> Presentation</title>    
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+$(document).ready(function(){
+  $("#flip1").click(function(){
+    $("#panel1").slideToggle("slow");
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<style> 
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #85c4e8b0;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+#panel1, #flip1 {
+  padding: 5px;
+  text-align: center;
+  background-color: #85c4e8b0;
+  border: solid 1px #c3c3c3;
+}
+
+#panel1 {
+  padding: 50px;
+  display: none;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.h1 li{
+             background-color:#41879ce0;
+              color:white;
+              font-size:20px;
+               
+            }
+             h1 a:hover {
+              color: white;
+                 background-color: transparent;
+               text-decoration: underline;
+}
+</style>
+</head>
+<body>
+  <div class="h1">
+        <div class="container">
+          <div class="row">
+<ul class="nav nav-tabs">
+    
+    
+
+    
+        <li  role="presentation"><a href=""type="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li> 
+        <li  role="presentation"class="dropdown"><a href="#"type="button"data-toggle="dropdown"aria-expanded="false"aria-haspopup="true">Presentation<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/whoweare">Who Are we?</a></li></ul></li>
+  
+
+   
+                          
+                                  <li  role="presentation"><a href="{{path('user_registration')}}"type="button">Inscription </a></li>   
+        <li  role="presentation"><a href="{{path('user_new')}}"type="button">Login</a></li>   
+
+
+                   <li  role="presentation"><a href="{{path('excel')}}"type="button">Excel User</a></li> 
+
+
+
+
+        </ul>
+  </div></div></div>
+ <div class="container">
+ 	<div class="row">
+<div id="flip">Presentation</div>
+<div id="panel">Shop-online establishes its position on an international scale
+We offer both cosmetics or clothing
+whatever the sex and size and age of the client
+We are proud of our own names and our hard-working teams.
+In collaborations and below a team leader we work
+We are reachable at any time to meet customer needs</div>
+<div id="flip1">Vision</div>
+<div id="panel1">
+	<ul><li>Meet customer needs
+<li>To have the taste and the color and the fashion of our day in coincidence with the demand of market</li>
+<li>Load the showcase by products and clothing and follow the facebook page every day</li>
+<li>update and respond to all customers</li>
+<li>follow customer demand until the day of receiving the product</li>
+<li>Sell ​​high quality products and clothing</li>
+<li>Facilitate the online purchase and follow up to day customers and be present for the response of our customers</li>
+<li>Reduce the cost of product in the promo month</li>
+<li>belly wholesale and ease of clothes</li></ul></div>
+<input id="myInput" type="text" placeholder="Search..">
+<br><br>
+
+<table>
+  <thead>
+  <tr>
+    <th>Missions</th>
+    <th>Promo</th>
+    
+  </tr>
+  </thead>
+  <tbody id="myTable">
+  <tr>
+    <td>
+    <ul>
+      <li>Secure a product on order within the time limit when the customer orders</li>
+<li>Have an online shop service that answers all questions</li>
+<li>Updating products and clothing</li>
+<li>Customer respect and customer reliability</li>
+<li>a basket loaded with the most luxurious products and clothes</li>
+<li>Reasonably priced products and clothing</li>
+<li>Sales conditions and negotiations with loyal customers</li>
+<li>on-load products and online orders</li>
+<li>Sales according to the best known in the international mode</li>
+<li>beautiful, practical and sporty and elegant clothes</li>
+<li>clothing colors according to fashion and fashion</li>
+    </ul>
+
+
+    </td>
+    <td>Promo : le 12/10/2021</td>
+  </tr>
+  
+  </tbody>
+</table>
+  
+
+
+</div></div>
+</body>
+</html> 

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+        {% block stylesheets %}{% endblock %}
+        <style>
+          .s1{
+  background-color:#41879ce0;
+}
+
+          table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+           .r1{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+            
+           }
+           .r2{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+
+           }
+           .r3{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+            
+           }
+           .r4{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r5{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r6{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r7{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r8{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r9{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r10{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r11{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r12{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r13{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r14{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r15{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r16{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r17{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+            .{
+              background-color:#e3ec59e0;
+              color:grey;
+            }
+            .h1 li{
+             background-color:#41879ce0;
+              color:white;
+              font-size:20px;
+               
+            }
+             h1 a:hover {
+              color: white;
+                 background-color: transparent;
+               text-decoration: underline;
+}
+
+
+            .g1{
+           border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+
+          #conteneur{
+            display:flex;
+            justify-content:flex-start;
+          }
+          .gh1{
+            background-color:#85c4e8b0;
+            width:600px;
+            
+            margin-bottom:20px;
+          }
+        </style>
+    </head>
+    <body >
+      <div class="h1">
+        <div class="container">
+          <div class="row">
+<ul class="nav nav-tabs">
+    
+    
+ 
+        <li  role="presentation"><a href="#"type="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li> 
+        <li  role="presentation"class="dropdown"><a href="#"type="button"data-toggle="dropdown"aria-expanded="false"aria-haspopup="true">Presentation<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/whoweare">Who Are we?</a></li></ul></li>
+  
+
+   
+                          
+                                  <li  role="presentation"><a href="{{path('user_registration')}}"type="button">Register  </a></li>   
+        <li  role="presentation"><a href="{{path('login')}}"type="button">Login</a></li>   
+
+
+                   <li  role="presentation"><a href="{{path('excel')}}"type="button">Excel User</a></li> 
+
+
+<li  role="presentation"><div id="conteneur"><div class="gh1"><input type="search" name="search"class="form-control"></div><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div></li> 
+
+        </ul>
+  </div></div></div>
+  <br><br>
+  <div class="container">
+    
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="/image/1.jpg" alt="" >
+      </div>
+
+      <div class="item">
+        <img src="/image/2.png" alt="" >
+      </div>
+    
+      <div class="item">
+        <img src="/image/3.png" alt="" >
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<br><br><br><br><br><br><br><br>
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="{{path('excel1')}}" class="list-group-item"> Excel Cart</a></li>
+    <li><a href="{{path('excel2')}}" class="list-group-item"> Excel Cartline</a>
+</li>
+    <li>    <a href="{{path('excel3')}}" class="list-group-item"> Excel Category</a>
+</li>
+    <li>    <a href="{{path('excel4')}}" class="list-group-item">Excel City</a>
+</li>
+    <li>        <a href="{{path('excel5')}}" class="list-group-item">Excel Country</a>
+</li>
+        <li>    <a href="{{path('excel6')}}" class="list-group-item">Excel Delivery Option</a>
+</li>
+    <li>    <a href="{{path('excel7')}}" class="list-group-item">Excel Follower</a>
+</li>
+    <li>    <a href="{{path('excel8')}}" class="list-group-item">Excel Order</a>
+</li>
+<li><a href="" class="list-group-item">Excel Product</a>
+</li>
+<li>    <a href="{{path('excel9')}}" class="list-group-item">Excel Reviews</a>
+</li>
+<li>    <a href="{{path('excel10')}}" class="list-group-item">Excel Section</a>
+</li>
+<li>    <a href="{{path('excel11')}}" class="list-group-item">Excel Sponsored Restaurant</a>
+</li>
+<li>    <a href="{{path('excel12')}}" class="list-group-item">Excel Status History</a>
+</li>
+<li>    <a href="{{path('excel15')}}" class="list-group-item">Excel SubCategory</a>
+</li>
+<li>    <a href="{{path('excel13')}}" class="list-group-item">Excel Transportation</a>
+</li>
+<li>        <a href="{{path('excel14')}}" class="list-group-item">Excel Variant</a>
+</li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<div class="col-md-4">
+       
+        <div class="list-group">
+  
+  <a href="{{path('cart_new')}}" class="list-group-item"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+  <a href="{{path('cart_line_new')}}" class="list-group-item">Cartline</a>
+
+
+  <a href="{{path('category_new')}}" class="list-group-item">Category</a>
+
+
+  <a href="{{path('city_new')}}" class="list-group-item">City</a>
+
+
+    <a href="{{path('country_new')}}" class="list-group-item">Country</a>
+
+
+  <a href="{{path('delivery_option_new')}}" class="list-group-item">Delivery Option</a>
+
+
+  <a href="{{path('follower_new')}}" class="list-group-item">Follower</a>
+
+
+  <a href="{{path('gallery_new')}}" class="list-group-item">Gallery</a>
+
+
+  <a href="{{path('order_new')}}" class="list-group-item">Order</a>
+
+
+  <a href="{{path('product_new')}}" class="list-group-item">Product</a>
+
+
+  <a href="{{path('reviews_new')}}" class="list-group-item">Reviews</a>
+
+
+  <a href="{{path('section_new')}}" class="list-group-item">Section</a>
+
+
+  <a href="{{path('sponsored_restaurant_new')}}" class="list-group-item">Sponsored Restaurant</a>
+
+
+  <a href="{{path('status_history_new')}}" class="list-group-item">Status History</a>
+
+
+  <a href="{{path('sub_category_new')}}" class="list-group-item">SubCategory</a>
+
+
+  <a href="{{path('transportation_new')}}" class="list-group-item">Transportation</a>
+
+
+    <a href="{{path('variant_new')}}" class="list-group-item">Variant</a>
+
+
+</div>
+</div>
+
+        {% block body %}{% endblock %}
+
+    
+
+    
+    
+
+    {% block javascripts %}{% endblock %}
+    </body>
+</html>

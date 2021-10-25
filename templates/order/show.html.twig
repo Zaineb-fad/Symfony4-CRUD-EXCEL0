@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Order{% endblock %}
+
+{% block body %}
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+
+    <h1>Order</h1>
+
+    <table class="table table-condensed">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ order.id }}</td>
+            </tr>
+            <tr>
+                <th>TrackNumber</th>
+                <td>{{ order.trackNumber }}</td>
+            </tr>
+            <tr>
+                <th>FullName</th>
+                <td>{{ order.fullName }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ order.phone }}</td>
+            </tr>
+            <tr>
+                <th>OrderDate</th>
+                <td>{{ order.orderDate ? order.orderDate|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ order.status }}</td>
+            </tr>
+            <tr>
+                <th>OrderBookDate</th>
+                <td>{{ order.orderBookDate ? order.orderBookDate|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>BookTalbe</th>
+                <td>{{ order.bookTalbe ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Adress</th>
+                <td>{{ order.adress }}</td>
+            </tr>
+            <tr>
+                <th>DeliveryOption</th>
+                <td>{{ order.deliveryOption }}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{ order.city }}</td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td>{{ order.note }}</td>
+            </tr>
+            <tr>
+                <th>Carts</th>
+                <td>{{ order.carts }}</td>
+            </tr>
+            <tr>
+                <th>StatusHistory</th>
+                <td>{{ order.statusHistory }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('order_index') }}">back to list</a>
+
+    <a href="{{ path('order_edit', {'id': order.id}) }}">edit</a>
+
+    {{ include('order/_delete_form.html.twig') }}
+    </div></div></div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Order{% endblock %}
+
+{% block body %}
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<div class="r1">
+    <h1>Create new Order</h1>
+
+    {{ include('order/_form.html.twig') }}
+
+    <a href="{{ path('order_index') }}">back to list</a>
+    </div></div></div></div>
+{% endblock %}

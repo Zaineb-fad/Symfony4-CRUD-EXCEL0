@@ -1,0 +1,270 @@
+
+ <html>
+<head>
+    <link href="{{ asset('theme/assets/css/bootstrap.min.css')}}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+<style>
+
+body {
+    color: #000;
+    overflow-x: hidden;
+    height: 60%;
+    background-color: #B0BEC5;
+    background-repeat: no-repeat;
+    width:600px;
+}
+
+.card0 {
+    box-shadow: 0px 4px 8px 0px #757575;
+    border-radius: 0px
+}
+
+.card2 {
+    margin: 0px 40px
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 35px
+}
+
+.image {
+    width: 360px;
+    height: 280px
+}
+
+.border-line {
+    border-right: 1px solid #EEEEEE
+}
+
+.facebook {
+    background-color: #3b5998;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer
+}
+
+.twitter {
+    background-color: #1DA1F2;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer
+}
+
+.linkedin {
+    background-color: #2867B2;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer
+}
+
+.line {
+    height: 1px;
+    width: 45%;
+    background-color: #E0E0E0;
+    margin-top: 10px
+}
+
+.or {
+    width: 10%;
+    font-weight: bold
+}
+
+.text-sm {
+    font-size: 14px !important
+}
+
+::placeholder {
+    color: #BDBDBD;
+    opacity: 1;
+    font-weight: 300
+}
+
+:-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+::-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+input,
+textarea {
+    padding: 10px 12px 10px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px
+}
+
+input:focus,
+textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #304FFE;
+    outline-width: 0
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+a {
+    color: inherit;
+    cursor: pointer
+}
+
+.btn-blue {
+    background-color: #6B8E23;
+    width: 150px;
+    color: #fff;
+    border-radius: 2px;
+    margin-left:150px;
+
+}
+
+.btn-blue:hover {
+    color: #fff;
+    cursor: pointer
+}
+
+.bg-blue {
+    color: #fff;
+    background-color: #6B8E23
+}
+
+@media screen and (max-width: 991px) {
+    .logo {
+        margin-left: 0px
+    }
+
+    .image {
+        width: 300px;
+        height: 220px
+    }
+
+    .border-line {
+        border-right: none
+    }
+
+    .card2 {
+        border-top: 1px solid #EEEEEE !important;
+        margin: 0px 15px
+    }
+}
+ .h1 li{
+             background-color:#41879ce0;
+              color:white;
+              font-size:20px;
+               
+            }
+             h1 a:hover {
+              color: white;
+                 background-color: transparent;
+               text-decoration: underline;
+}
+.gh1{
+            background-color:#85c4e8b0;
+            width:600px;
+            margin-bottom:10px;
+
+            
+            
+          }
+          #conteneur{
+            display:flex;
+            justify-content:flex-start;
+          }
+</style>
+</head>
+<body>
+ <div class="h1">
+        <div class="container">
+          <div class="row">
+<ul class="nav nav-tabs">
+    
+    
+
+    
+        <li  role="presentation"><a href="#"type="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li> 
+        <li  role="presentation"class="dropdown"><a href="#"type="button"data-toggle="dropdown"aria-expanded="false"aria-haspopup="true">Presentation<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/whoweare">Who Are we?</a></li></ul></li>
+  
+
+   
+                          
+                                  <li  role="presentation"><a href="{{path('user_registration')}}"type="button">Register  </a></li>   
+        <li  role="presentation"><a href="{{path('login')}}"type="button">Login</a></li>   
+
+
+                   <li  role="presentation"><a href="{{path('excel')}}"type="button">Excel User</a></li> 
+
+<li  role="presentation"><div id="conteneur"><div class="gh1"><input type="search" name="search"class="form-control"></div><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div></li> 
+
+
+        </ul>
+  </div></div></div>
+  <br><br><br>
+
+
+<div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+    <div class="card card0 border-0">
+        <div class="row d-flex">
+           
+            <div class="col-lg-6">
+                <div class="card2 card border-0 px-4 py-5">
+
+
+    <form  action="{{ path('login') }}" method="post">
+         {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+                    <div class="row px-3"> <label class="mb-1">
+                            <h6 class="mb-0 text-sm">Name user</h6>
+                        </label> <input class="mb-4" type="text" id="username" name="_username" placeholder="Enter nom utilisateur" onfocus="this.value=''"> </div>
+                    <div class="row px-3"> <label class="mb-1">
+                            <h6 class="mb-0 text-sm">password</h6>
+                        </label> <input type="password" id="password" name="_password" placeholder="Enter mot de passe" onfocus="this.value=''"> </div>
+<br><br>
+                    <div class="row mb-3 px-3"> <button type="submit" class="btn btn-blue text-center">connexion</button> </div>
+</form>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Order index{% endblock %}
+
+{% block body %}
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+
+    <h1>Order index</h1>
+
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>TrackNumber</th>
+                <th>FullName</th>
+                <th>Phone</th>
+                <th>OrderDate</th>
+                <th>Status</th>
+                <th>OrderBookDate</th>
+                <th>BookTalbe</th>
+                <th>Adress</th>
+                <th>DeliveryOption</th>
+                <th>City</th>
+                <th>Note</th>
+                <th>Carts</th>
+                <th>StatusHistory</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for order in orders %}
+            <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.trackNumber }}</td>
+                <td>{{ order.fullName }}</td>
+                <td>{{ order.phone }}</td>
+                <td>{{ order.orderDate ? order.orderDate|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ order.status }}</td>
+                <td>{{ order.orderBookDate ? order.orderBookDate|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ order.bookTalbe ? 'Yes' : 'No' }}</td>
+                <td>{{ order.adress }}</td>
+                <td>{{ order.deliveryOption }}</td>
+                <td>{{ order.city }}</td>
+                <td>{{ order.note }}</td>
+                <td>{{ order.carts }}</td>
+                <td>{{ order.statusHistory }}</td>
+                <td>
+                <div id="conteneur">
+                    <a href="{{ path('order_show', {'id': order.id}) }}"class="btn btn-success">show</a>
+                    <a href="{{ path('order_edit', {'id': order.id}) }}"class="btn btn-info">edit</a></div>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="15">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('order_new') }}"class="btn btn-lg">Create new</a>
+    </div></div></div>
+{% endblock %}

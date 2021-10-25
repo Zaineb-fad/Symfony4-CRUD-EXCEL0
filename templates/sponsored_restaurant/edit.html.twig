@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit SponsoredRestaurant{% endblock %}
+
+{% block body %}
+    <h1>Edit SponsoredRestaurant</h1>
+
+    {{ include('sponsored_restaurant/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('sponsored_restaurant_index') }}">back to list</a>
+
+    {{ include('sponsored_restaurant/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cart{% endblock %}
+
+{% block body %}
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+
+    <h1>Cart</h1>
+
+    <table class="table table-condensed">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ cart.id }}</td>
+            </tr>
+            <tr>
+                <th>CartLines</th>
+                <td>{{ cart.cartLines }}</td>
+            </tr>
+            <tr>
+                <th>OrderCart</th>
+                <td>{{ cart.orderCart }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('cart_index') }}">back to list</a>
+
+    <a href="{{ path('cart_edit', {'id': cart.id}) }}">edit</a>
+
+    {{ include('cart/_delete_form.html.twig') }}
+    </div></div></div>
+{% endblock %}

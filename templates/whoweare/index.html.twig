@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    {% block title %}{% endblock %}
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+        {% block stylesheets %}{% endblock %}
+        <style>
+          .s1{
+  background-color:#41879ce0;
+}
+
+          table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+           .r1{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+            
+           }
+           .r2{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+
+           }
+           .r3{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+            
+           }
+           .r4{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r5{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r6{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r7{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r8{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r9{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r10{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r11{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r12{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r13{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r14{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r15{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r16{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+           .r17{
+            border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+            .{
+              background-color:#e3ec59e0;
+              color:grey;
+            }
+            .h1 li{
+             background-color:#41879ce0;
+              color:white;
+              font-size:20px;
+               
+            }
+             h1 a:hover {
+              color: white;
+                 background-color: transparent;
+               text-decoration: underline;
+}
+
+
+            .g1{
+           border:3px inset;
+            background-color: #85c4e8b0;
+            color:grey;
+           }
+
+          #conteneur{
+            display:flex;
+            justify-content:flex-start;
+          }
+          .gh1{
+            background-color:#85c4e8b0;
+            width:600px;
+            
+            margin-bottom:20px;
+          }
+        </style>
+    </head>
+    <body >
+      <div class="h1">
+        <div class="container">
+          <div class="row">
+<ul class="nav nav-tabs">
+    
+    
+ 
+        <li  role="presentation"><a href="#"type="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li> 
+        <li  role="presentation"class="dropdown"><a href="#"type="button"data-toggle="dropdown"aria-expanded="false"aria-haspopup="true">Presentation<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/whoweare">Who Are we?</a></li></ul></li>
+  
+
+   
+                          
+                                  <li  role="presentation"><a href="{{path('user_registration')}}"type="button">Inscription  </a></li>   
+        <li  role="presentation"><a href="{{path('login')}}"type="button">Login</a></li>   
+
+
+                   <li  role="presentation"><a href="{{path('excel')}}"type="button">Excel User</a></li> 
+
+
+<li  role="presentation"><div id="conteneur"><div class="gh1"><input type="search" name="search"class="form-control"></div><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div></li> 
+
+        </ul>
+  </div></div></div>
+
+
+
+
+ <div class="container">
+ 	<div class="row">
+<div id="flip"><h1>Presentation</h1></div>
+<div id="panel"><p>Shop-online establishes its position on an international scale
+We offer both cosmetics or clothing
+whatever the sex and size and age of the client
+We are proud of our own names and our hard-working teams.
+In collaborations and below a team leader we work
+We are reachable at any time to meet customer needs</p></div>
+
+<input id="myInput" type="text" placeholder="Search..">
+<br><br>
+
+<table>
+  <thead>
+  <tr>
+    <th>Missions</th>
+    <th>Vision</th>
+    <th>Promo</th>
+    
+  </tr>
+  </thead>
+  <tbody id="myTable">
+  <tr>
+    <td>
+    <ul>
+      <li>Secure a product on order within the time limit when the customer orders</li>
+<li>Have an online shop service that answers all questions</li>
+<li>Updating products and clothing</li>
+<li>Customer respect and customer reliability</li>
+<li>a basket loaded with the most luxurious products and clothes</li>
+<li>Reasonably priced products and clothing</li>
+<li>Sales conditions and negotiations with loyal customers</li>
+<li>on-load products and online orders</li>
+<li>Sales according to the best known in the international mode</li>
+<li>beautiful, practical and sporty and elegant clothes</li>
+<li>clothing colors according to fashion and fashion</li>
+    </ul>
+
+
+    </td>
+    <td><ul><li>Meet customer needs
+<li>To have the taste and the color and the fashion of our day in coincidence with the demand of market</li>
+<li>Load the showcase by products and clothing and follow the facebook page every day</li>
+<li>update and respond to all customers</li>
+<li>follow customer demand until the day of receiving the product</li>
+<li>Sell ​​high quality products and clothing</li>
+<li>Facilitate the online purchase and follow up to day customers and be present for the response of our customers</li>
+<li>Reduce the cost of product in the promo month</li>
+<li>belly wholesale and ease of clothes</li></ul></td>
+    <td>Promo : le 12/10/2021</td>
+  </tr>
+  
+  </tbody>
+</table>
+  
+
+
+</div></div>
+
+{% block body %}
+{% endblock %}</body></html>

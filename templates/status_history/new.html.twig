@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New StatusHistory{% endblock %}
+
+{% block body %}
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<div class="r1">
+    <h1>Create new StatusHistory</h1>
+
+    {{ include('status_history/_form.html.twig') }}
+
+    <a href="{{ path('status_history_index') }}">back to list</a>
+    </div></div></div></div>
+{% endblock %}

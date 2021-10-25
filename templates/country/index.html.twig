@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Country index{% endblock %}
+
+{% block body %}
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+
+    <h1>Country index</h1>
+
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Cities</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for country in countries %}
+            <tr>
+                <td>{{ country.id }}</td>
+                <td>{{ country.cities }}</td>
+                <td>
+                    <a href="{{ path('country_show', {'id': country.id}) }}"class="btn btn-success">show</a>
+                    <a href="{{ path('country_edit', {'id': country.id}) }}"class="btn btn-info">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('country_new') }}"class="btn btn-lg">Create new</a>
+    </div></div></div>
+{% endblock %}
